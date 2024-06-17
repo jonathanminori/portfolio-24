@@ -27,13 +27,14 @@ export const metadata: Metadata = {
       {
         url: 'https://nextjs.org/og.png', // Must be an absolute URL
         width: 800,
-        height: 600
+        height: 600,
+        alt: 'Jonathan Minori - Design leader from Portland, Oregon'
       },
       {
         url: 'https://nextjs.org/og-alt.png', // Must be an absolute URL
         width: 1800,
         height: 1600,
-        alt: 'My custom alt'
+        alt: 'Jonathan Minori - Design leader from Portland, Oregon'
       }
     ],
     locale: 'en_US',

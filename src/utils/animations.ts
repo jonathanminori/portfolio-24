@@ -17,8 +17,8 @@ export const animatePageIn = () => {
       .to(
         transitionElement,
         {
-          borderTopLeftRadius: '50vh',
-          borderBottomLeftRadius: '50vh',
+          // borderTopLeftRadius: '50vh',
+          // borderBottomLeftRadius: '50vh',
           duration: 0.4
         },
         '<'
@@ -33,11 +33,11 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
     const tl = gsap.timeline()
 
     tl.set(animationWrapper, {
-      xPercent: -100,
-      borderTopRightRadius: '50vh',
-      borderBottomRightRadius: '50vh',
-      borderTopLeftRadius: '0',
-      borderBottomLeftRadius: '0'
+      xPercent: -100
+      // borderTopRightRadius: '50vh',
+      // borderBottomRightRadius: '50vh',
+      // borderTopLeftRadius: '0',
+      // borderBottomLeftRadius: '0'
     })
       .to(animationWrapper, {
         xPercent: 0,
@@ -49,8 +49,8 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
       .to(
         animationWrapper,
         {
-          borderTopRightRadius: '0',
-          borderBottomRightRadius: '0',
+          // borderTopRightRadius: '0',
+          // borderBottomRightRadius: '0',
           duration: 0.4
         },
         '<'

@@ -2,11 +2,10 @@ import TransitionLink from '@/components/TransitionLink'
 
 export default function Header() {
   return (
-    <header className=''>
-      <div className='container flex items-center justify-between py-4'>
-        Jonathan Minori
+    <header className='px-8 py-4'>
+      <div className='flex justify-end'>
         <nav>
-          <ul className='flex space-x-4'>
+          <ul className='flex items-center space-x-8'>
             <li>
               <TransitionLink href='/' label='Profile' />
             </li>

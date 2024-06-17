@@ -11,6 +11,16 @@ export default {
         sans: ['"NHaasGroteskDSPro"', ...defaultTheme.fontFamily.sans],
         serif: ['"GT-Alpina-Standard"', ...defaultTheme.fontFamily.serif]
       }
+    },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '2rem',
+        md: '0rem'
+      },
+      screens: {
+        lg: '45rem'
+      }
     }
   },
   plugins: [require('@tailwindcss/typography')]
