@@ -111,7 +111,7 @@ export default function Home() {
             >
               <div
                 id='able'
-                className='aspect-4/3 flex w-full flex-col justify-between rounded-xl bg-[#FCFFDE]'
+                className='flex aspect-4/3 w-full flex-col justify-between rounded-xl bg-[#FCFFDE]'
               >
                 <div className='aspect-4/3 w-full'></div>
                 <div className='px-8 pb-3'>
