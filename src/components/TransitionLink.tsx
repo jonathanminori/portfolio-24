@@ -21,7 +21,7 @@ export default function TransitionLink({
 
   return (
     <button
-      className='cursor-pointer text-sm font-medium'
+      className='cursor-pointer text-sm font-medium text-neutral-950 dark:text-neutral-200'
       onClick={handleClick}
     >
       {label}

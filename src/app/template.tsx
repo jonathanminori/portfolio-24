@@ -12,7 +12,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <>
       <div
         id='transition-element'
-        className='fixed left-0 top-0 z-10 h-screen w-screen bg-neutral-50 dark:bg-black'
+        className='fixed left-0 top-0 z-10 h-screen w-screen bg-neutral-100 dark:bg-neutral-900'
       ></div>
       {children}
     </>

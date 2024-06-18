@@ -5,7 +5,7 @@ import Header from './header'
 
 export const metadata: Metadata = {
   title: 'Jonathan Minori',
-  description: 'Design leader from Portland, Oregon',
+  description: 'Design Director based in Portland, Oregon',
   generator: 'Next.js',
   applicationName: 'Portfolio 2024',
   referrer: 'origin-when-cross-origin',
@@ -18,9 +18,12 @@ export const metadata: Metadata = {
     'portfolio'
   ],
   creator: 'Jonathan Minori',
+  icons: {
+    icon: 'img/favicon.svg'
+  },
   openGraph: {
     title: 'Jonathan Minori',
-    description: 'Design leader from Portland, Oregon',
+    description: 'Design Director based in Portland, Oregon',
     url: 'https://www.mino.xyz',
     siteName: 'Jonathan Minori',
     images: [

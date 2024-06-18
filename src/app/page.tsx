@@ -1,47 +1,56 @@
 'use client'
 
 import { useEffect } from 'react'
-import useEmblaCarousel from 'embla-carousel-react'
-import Autoplay from 'embla-carousel-autoplay'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { ScrollSmoother } from 'gsap/ScrollSmoother'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Minus } from 'lucide-react'
+import Testimonial from '@/components/testimonial'
+import { EmblaOptionsType } from 'embla-carousel'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother)
 
+const testimonial_options: EmblaOptionsType = { align: 'start', loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 export default function Home() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()])
   useEffect(() => {
     ScrollSmoother.create({
       wrapper: '#wrapper',
       content: '#content',
       smooth: 1.2,
-      effects: false,
+      effects: true,
       normalizeScroll: true,
       ignoreMobileResize: true
     })
   }, [])
   return (
     <div id='wrapper' className='container z-0'>
-      <div id='content' className='prose pb-96 pt-24 text-xl font-normal'>
-        <article
-          id='intro'
-          className='mb-14 text-neutral-900 dark:text-neutral-100'
-        >
-          <h1 className='text-base font-medium'>
-            Jonathan Minori
+      <div id='content' className='prose pb-48 pt-24 text-xl font-normal'>
+        <article id='intro' className='mb-14 cursor-help'>
+          <h1 className='group text-base font-medium text-neutral-950 dark:text-neutral-200'>
+            <span className='delay-800 transition-opacity duration-[1600ms] ease-linear group-hover:opacity-10'>
+              Jonathan{' '}
+            </span>
+            Mino
+            <span className='delay-800 transition-opacity duration-[1600ms] ease-linear group-hover:opacity-10'>
+              ri
+            </span>
             <br />
             <span className='text-sm font-normal opacity-60'>
               Design Director based in Portland, Oregon
             </span>
           </h1>
         </article>
-        <article id='bio' className='mb-24 text-black dark:text-zinc-200'>
+        <article
+          id='bio'
+          className='mb-24 text-neutral-950 dark:text-neutral-200'
+        >
           <h2 className='info-headline sr-only'>Bio</h2>
           <p>
-            I'm a hands-on design leader and startup founder with two decades of
+            A hands-on design leader and startup founder with two decades of
             experience driving innovation and creative excellence.
           </p>
           <p>
@@ -50,7 +59,10 @@ export default function Home() {
             experiences, particularly in the realm of emerging technologies.
           </p>
         </article>
-        <article id='curently' className='mb-24 text-black dark:text-zinc-200'>
+        <article
+          id='curently'
+          className='mb-24 text-neutral-950 dark:text-neutral-200'
+        >
           <h2 className='info-headline'>Currently</h2>
           <p>
             I work as a fractional design leader with startups and Fortune 100
@@ -63,30 +75,12 @@ export default function Home() {
             product experiences and foster a culture of innovation and
             excellence.
           </p>
-          <div className='embla' ref={emblaRef}>
-            <div className='embla__container'>
-              <div className='embla__slide'>
-                <p>
-                  Jonathan has been an invaluable partner as our fractional
-                  design leader over the last quarter. He quickly developed up a
-                  deep understanding of our target customer, product vision, and
-                  company context. Jonathan had a knack for reframing a
-                  strategic opportunity with a razor sharp “obvious when you
-                  hear it” analogy or mental model. He’s a fantastic
-                  communicator that keeps his partners informed of day-to-day
-                  execution through timely, lightweight updates. Jonathan also
-                  played a key role in hiring our first full-time design leader.
-                  He had great intuition for the profile we needed and expertly
-                  assessed our candidate pool. We’re in a much stronger position
-                  today because of Jonathan’s many contributions to our team.
-                </p>
-              </div>
-              <div className='embla__slide'>Slide 2</div>
-              <div className='embla__slide'>Slide 3</div>
-            </div>
-          </div>
+          <Testimonial slides={SLIDES} options={testimonial_options} />
         </article>
-        <article id='extra' className='mb-24 text-black dark:text-zinc-200'>
+        <article
+          id='extra'
+          className='mb-24 text-neutral-950 dark:text-neutral-200'
+        >
           <h2 className='info-headline'>Extracurriculars</h2>
           <div className='grid grid-cols-1 gap-2 sm:grid-cols-2'>
             <a
@@ -100,10 +94,10 @@ export default function Home() {
               >
                 <div className='aspect-4/3 w-full'></div>
                 <div className='px-8 pb-3'>
-                  <h3 className='mb-1.5 text-xl font-medium text-white'>
+                  <h3 className='mb-1.5 text-xl font-medium text-neutral-100'>
                     ADPList
                   </h3>
-                  <p className='text-base leading-snug text-white opacity-80'>
+                  <p className='text-base leading-snug text-neutral-100 opacity-80'>
                     1,000+ minutes mentoring designers to land their next role
                     or pursue a career in freelance.
                   </p>
@@ -140,10 +134,10 @@ export default function Home() {
               >
                 <div className='aspect-4/3 w-full'></div>
                 <div className='px-8 pb-3'>
-                  <h3 className='mb-1.5 text-xl font-medium text-white'>
+                  <h3 className='mb-1.5 text-xl font-medium text-neutral-100'>
                     Pickle Thumbs
                   </h3>
-                  <p className='text-base leading-snug text-white opacity-80'>
+                  <p className='text-base leading-snug text-neutral-100 opacity-80'>
                     Making things to help gardeners find their green thumb.
                   </p>
                 </div>
@@ -151,13 +145,16 @@ export default function Home() {
             </a>
             <div
               id='secret'
-              className='flex h-full w-full select-none items-center justify-center rounded-xl border border-dashed border-neutral-500/10 text-sm text-neutral-700/20'
+              className='flex h-full w-full select-none items-center justify-center rounded-xl bg-neutral-200/10 text-sm text-neutral-400 dark:bg-neutral-700/10 dark:text-neutral-500'
             >
               Coming Soon
             </div>
           </div>
         </article>
-        <article id='core' className='mb-24 text-black dark:text-zinc-200'>
+        <article
+          id='core'
+          className='mb-24 text-neutral-950 dark:text-neutral-200'
+        >
           <h2 className='info-headline'>Core Skills</h2>
           <p>
             Product Design, Product Strategy, Prototyping, Creative Direction,
@@ -167,7 +164,7 @@ export default function Home() {
         </article>
         <article
           id='recognized'
-          className='mb-24 text-black dark:text-zinc-200'
+          className='mb-24 text-neutral-950 dark:text-neutral-200'
         >
           <h2 className='info-headline'>Recognized</h2>
           <p>
@@ -175,18 +172,18 @@ export default function Home() {
             Communication Arts, Webby, IxDA, and multiple FWA Awards
           </p>
         </article>
-        <article id='contact' className='text-black dark:text-zinc-200'>
+        <article id='contact' className='mb-24'>
           <h2 className='info-headline'>Connect</h2>
-          <ul className='m-0 list-outside list-none p-0 font-sans'>
+          <ul className='list-outside list-none p-0 font-sans'>
             <li className='contact-list'>
               <a
                 href='mailto:jonathan.minori@gmail.com'
                 title='Email me'
                 className='contact-label group'
               >
-                <span className='text-black dark:text-zinc-200'>Email</span>
+                Email
                 <ArrowUpRight
-                  size={20}
+                  size={16}
                   strokeWidth={1.25}
                   absoluteStrokeWidth
                   className='contact-icon'
@@ -201,7 +198,7 @@ export default function Home() {
               >
                 CV
                 <ArrowUpRight
-                  size={20}
+                  size={16}
                   strokeWidth={1.25}
                   absoluteStrokeWidth
                   className='contact-icon'
@@ -216,7 +213,7 @@ export default function Home() {
               >
                 LinkedIn
                 <ArrowUpRight
-                  size={20}
+                  size={16}
                   strokeWidth={1.25}
                   absoluteStrokeWidth
                   className='contact-icon'
@@ -231,7 +228,7 @@ export default function Home() {
               >
                 Twitter
                 <ArrowUpRight
-                  size={20}
+                  size={16}
                   strokeWidth={1.25}
                   absoluteStrokeWidth
                   className='contact-icon'
@@ -239,6 +236,22 @@ export default function Home() {
               </a>
             </li>
           </ul>
+        </article>
+        <article id='colophon' className='text-xs text-neutral-500'>
+          <h2 className='sr-only'>Colophon</h2>
+          <Minus
+            size={16}
+            strokeWidth={1.25}
+            absoluteStrokeWidth
+            className='-translate-x-[4px] opacity-50'
+          />
+          <p className='leading-relaxed'>
+            Hand coded with a little help from ChatGPT
+            <br />
+            Type by Neue Montreal by Pangram Pangram
+            <br />
+            Icons by Lucide
+          </p>
         </article>
       </div>
     </div>

@@ -14,6 +14,9 @@ export default {
       aspectRatio: {
         '4/3': '4 / 3',
         '3/4': '3 / 4'
+      },
+      width: {
+        '168': '42rem'
       }
     },
     container: {
