@@ -8,8 +8,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"NHaasGroteskDSPro"', ...defaultTheme.fontFamily.sans],
-        serif: ['"GT-Alpina-Standard"', ...defaultTheme.fontFamily.serif]
+        sans: ['"PPNeueMontreal"', ...defaultTheme.fontFamily.sans]
+        // serif: ['"GT-Alpina-Standard"', ...defaultTheme.fontFamily.serif]
+      },
+      aspectRatio: {
+        '4/3': '4 / 3',
+        '3/4': '3 / 4'
       }
     },
     container: {
@@ -19,7 +23,7 @@ export default {
         md: '0rem'
       },
       screens: {
-        lg: '45rem'
+        lg: '42rem'
       }
     }
   },

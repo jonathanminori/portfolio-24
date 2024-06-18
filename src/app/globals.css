@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: 'GT-Alpina-Standard';
   src: url('/fonts/GT-Alpina-Standard-Light-Trial.woff2');
   font-weight: 300;
@@ -30,14 +30,56 @@
   font-family: 'NHaasGroteskDSPro';
   src: url('/fonts/NHaasGroteskDSPro-75Bd.woff2');
   font-weight: 700;
+} */
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Thin.woff2');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Light.woff2');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Book.woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-SemiBold.woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('/fonts/PPNeueMontreal-Bold.woff2');
+  font-weight: 700;
 }
 
 body {
-  @apply antialiased;
+  @apply antialiased selection:bg-fuchsia-300 selection:text-fuchsia-900;
 }
 
 .info-headline {
-  @apply mb-3 font-sans text-sm font-medium tracking-normal text-[#F84B40];
+  @apply mb-4 text-sm font-medium text-[#F84B40];
 }
 
 .contact-list {
@@ -50,4 +92,21 @@ body {
 
 .contact-icon {
   @apply stroke-current text-slate-300 group-hover:text-slate-900 dark:text-slate-800 dark:group-hover:text-slate-300;
+}
+
+.embla {
+  @apply overflow-hidden;
+}
+
+.embla__container {
+  @apply flex;
+}
+
+.embla__slide {
+  @apply mr-2 w-full min-w-0 flex-none rounded-t-xl rounded-br-xl border border-neutral-200 px-6;
+}
+
+.matrix {
+  background-image: url('../../public/img/matrix.svg');
+  background-size: 20px;
 }

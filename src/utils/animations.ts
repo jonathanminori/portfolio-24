@@ -12,7 +12,7 @@ export const animatePageIn = () => {
     })
       .to(transitionElement, {
         xPercent: 100,
-        duration: 0.8
+        duration: 1
       })
       .to(
         transitionElement,
@@ -41,7 +41,7 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
     })
       .to(animationWrapper, {
         xPercent: 0,
-        duration: 0.8,
+        duration: 0.5,
         onComplete: () => {
           router.push(href)
         }
@@ -51,7 +51,7 @@ export const animatePageOut = (href: string, router: AppRouterInstance) => {
         {
           // borderTopRightRadius: '0',
           // borderBottomRightRadius: '0',
-          duration: 0.4
+          duration: 0.2
         },
         '<'
       )

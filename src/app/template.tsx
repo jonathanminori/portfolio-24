@@ -9,12 +9,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
   }, [])
 
   return (
-    <div>
+    <>
       <div
         id='transition-element'
-        className='z-100 fixed left-0 top-0 h-screen w-screen bg-slate-100 dark:bg-black'
+        className='fixed left-0 top-0 z-10 h-screen w-screen bg-neutral-50 dark:bg-black'
       ></div>
       {children}
-    </div>
+    </>
   )
 }
