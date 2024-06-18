@@ -54,8 +54,8 @@ export default function Home() {
             experience driving innovation and creative excellence.
           </p>
           <p>
-            I've held pivotal roles across design, product, engineering, and
-            marketing, excelling at the intersection of brand and product
+            I&apos;ve held pivotal roles across design, product, engineering,
+            and marketing, excelling at the intersection of brand and product
             experiences, particularly in the realm of emerging technologies.
           </p>
         </article>

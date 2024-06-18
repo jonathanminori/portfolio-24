@@ -64,7 +64,7 @@ const EmblaCarousel: React.FC<PropType> = props => {
         <div className='embla__container'>
           {testimonial_data.map((item, index) => (
             <div className='embla__slide' key={index}>
-              <p className='font-semibold'>"{item.quote}"</p>
+              <p className='font-semibold'>&quot;{item.quote}&quot;</p>
               <p className='text-base font-medium leading-snug opacity-80'>
                 {item.name}
                 <br />
