@@ -100,18 +100,6 @@ html {
   @apply stroke-current text-neutral-300 transition-colors duration-500 ease-in-out group-hover:text-neutral-950 dark:text-neutral-700 dark:group-hover:text-neutral-200;
 }
 
-/* .embla {
-  @apply sm:w-168 mt-12 overflow-hidden border border-neutral-200 bg-neutral-200 sm:-translate-x-8 dark:border-neutral-800 dark:bg-neutral-800;
-}
-
-.embla__container {
-  @apply flex;
-}
-
-.embla__slide {
-  @apply min-w-0 mr-[1px] flex w-full min-w-0 flex-none select-none flex-col justify-between bg-white py-2 pl-8 pr-16 dark:bg-neutral-950;
-} */
-
 .embla {
   @apply sm:w-168 mt-12 overflow-hidden sm:-translate-x-8;
 }
@@ -124,18 +112,9 @@ html {
   touch-action: pan-y pinch-zoom;
 }
 .embla__slide {
-  @apply mr-[1px] flex h-72 w-full min-w-0 flex-none select-none flex-col justify-between bg-white py-2 pl-8 pr-16 dark:bg-neutral-950;
+  @apply mr-[1px] flex w-full min-w-0 flex-none select-none flex-col justify-between bg-white py-2 pl-8 pr-16 dark:bg-neutral-950;
 }
-.embla__slide__number {
-  box-shadow: inset 0 0 0 0.2rem var(--detail-medium-contrast);
-  border-radius: 1.8rem;
-  font-size: 4rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: var(--slide-height);
-}
+
 .embla__controls {
   @apply mt-3 flex items-center justify-center;
 }
