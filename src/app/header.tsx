@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import TransitionLink from '@/components/transitionlink'
+import TransitionLink from '@/components/TransitionLink'
 import { Moon, SunMedium } from 'lucide-react'
 
 export default function Header() {
